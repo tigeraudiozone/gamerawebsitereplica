@@ -1,0 +1,522 @@
+@font-face {
+    font-family: "decoder";
+    src: url("/fonts/decoder.ttf") format("truetype");
+}
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+@keyframes scroll {
+    0% {transform:translateX(100%);}
+    100% {transform:translateX(-100%);}
+}
+
+/* BODY */
+body {
+    background-color:black;
+    background-image:url(/images/greengrid.jpg);
+    background-position: 1px 0;
+    font-size: 11pt;
+    margin: 0;
+    padding:0;
+}
+
+
+
+/* LAYOUT*/
+/*PRINCIPAL CONTAINER*/
+
+.bgblackbox {
+    background:black;
+    width:1070px;
+    vertical-align:top;
+    margin:0 auto;
+    min-height:100vh;
+}
+
+/*HEADER CONTAINER*/
+.logocont {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/*MAIN CONTENT CONTAINER*/
+.bigcont {
+    margin:auto auto;
+    display:flex;
+    justify-content:center;
+    align-items: flex-start;
+    width:970px;
+    min-height:750px;
+}
+
+/*.bigcont child: MAIN*/
+.main {
+    background-color:black;
+    min-width:650px;
+    max-width:650ox;
+    min-height:750px;
+    margin: 0 auto;
+    border: 7px #00ab00;
+    border-style:solid;
+    color:hotpink;
+    position:relative;
+
+}
+
+
+/* .bigcont child: SIDE CONTENT */
+.sidecont {
+    display:flex;
+    width:135px;
+    max-width:135px;
+    flex-direction:column;
+    height:100%;
+}
+
+
+.sidecont ul, .sidecont li {
+    list-style:none;
+    margin:0;
+    padding:1px 0 2px 5px;
+    text-align:left;
+    text-indent:-1em;
+    line-height:0.7;
+    font-family:"decoder";
+    color:hotpink;
+    font-size:20px;
+}
+
+#gameraradio li {
+    text-align: right;
+    color:white;
+}
+
+#onlinenow {
+    font-family:decoder;
+    padding-right:7px;
+    color:lime;
+    font-size:8pt;
+}
+
+#livenow {
+    font-family:decoder;
+    animation:blinker 2s linear infinite;
+    padding-right:7px;
+    color:red;
+    font-size:8pt;
+}
+
+.no-wrap {
+    white-space:nowrap;
+}
+
+/*RADIOPLAYING - table tag*/
+#radioplaying {
+    width:135px;
+    max-width:135px;
+    font-family: ms ui gothic;
+    font-size:10.5pt;
+    border:1px white;
+    border-style:solid;
+}
+
+.radio-container {
+    overflow: hidden;
+}
+
+.marquee {
+    display:inline-block;
+    animation:scroll 10s linear infinite;
+    text-align:right;
+    padding-top:5px;
+    padding-bottom:5px;
+    
+}
+
+#radioplaying a {
+    color:white;
+    text-decoration:none;
+    padding:0;
+    margin:-2px;
+}
+
+#tracktitle:hover {
+    color:blue;
+}
+
+/*MENU*/
+#menu div {
+    text-align:left;
+    margin-left:10px;
+    color:lime;
+    margin-top:10px;
+}
+
+.menu {
+    background-color:black;
+    max-width:135px;
+    border:3px outset lime;
+}
+
+.menu li {
+    text-align:left;
+    margin:5px auto 5px -7px;
+    font-family:decoder;
+    color:hotpink;
+    font-size:18px;
+}
+
+.menu li::before {
+    text-align:left;
+    padding:0;
+    margin-left:25px;
+    content:" > ";
+    font-style:italic;
+    color:lime;
+    font-size:15px;
+}
+
+
+/*GUESTBOOK*/
+.guestbook {
+    font-size:7pt;
+    color:black;
+    background-color:white;
+    letter-spacing:0.05em;
+    font-family:Consolas;
+    max-height:15px;
+    min-height:15px;
+    text-align:center;
+    text-decoration:none;
+    position:relative;
+}
+
+#lastupdate {
+    color:white;
+    text-align:left;
+    font-size:9.3pt;
+    margin-top:-1px;
+    padding-bottom:2px;
+}
+
+hr.divider3 {
+    border:0;
+    margin: 0 0 5px 0;
+    clear:both;
+    display:block;
+    width:100%;
+    text-align:right;
+    border-top:3px solid #00ab00;
+}
+
+/*BUTTONS*/
+
+.button1 {
+    text-align:right;
+    color:white;
+    font-family:decoder;
+    font-size:18px;
+}
+
+.button1 a, .button1 a:visited {
+    color:lime;
+    text-decoration:none;
+    padding-top:0;
+    margin-top:0;
+}
+
+.button1 img {
+    padding-top:5px;
+}
+
+/*DIVIDER*/
+hr.divider2 {
+    border:0;
+    margin:5px 0 5px 45px;
+    clear:both;
+    width:100%;
+    text-align:right;
+    border-top:1px dotted #00ab00;
+}
+
+/*GAMERRING*/
+#gamer-ring {
+    margin:30px auto;
+    padding:5px;
+    color:#000;
+    backdrop-filter:blur(5px);
+    -webkit-backdrop-filter:blur(5px);
+    background-color:#e6e6e68a !important;
+    width:240px !important;
+    border-radius:15px;
+    box-shadow:inset 1px 1px 0 #ffffff77, 1px 1px 0 #00000077;
+    line-height:1.1;
+    letter-spacing:0;
+}
+
+#gamer-ring {
+    max-width:130px !important;
+    margin:10px auto 0 !important;
+    display:inline-block;
+    align-self:flex-end;
+}
+
+#gamer-ring table {
+    margin:0 auto;
+    filter: drop-shadow(0 0 5px #ffffff8c);
+    background-color:#ffffff48 !important;
+    border-radius:30px;
+    border-collapse:collapse;
+}
+
+#gamer-ring * {
+    border:none !important;
+}
+
+#gamer-ring .webring-prev, #gamer-ring .webring-next {
+    font-size:26px;
+}
+
+#gamer-ring .webring-prev {
+    text-align:right;
+}
+
+#gamer-ring table tr td {
+    padding:0 !important;
+}
+
+#gamer-ring a {
+    text-decoration:none;
+    color:#000;
+    text-shadow:1px 1px 0 #fff;
+}
+
+#gamer-ring img {
+    margin:4px 0 0;
+    mix-blend-mode:unset;
+    filter:unset;
+}
+
+#gamer-ring .webring-info {
+    text-align:center;
+    font-family:monospace;
+    font-size:11px;
+}
+
+#gamer-ring .gamerringtext {
+    text-align:center;
+    color:#000;
+    text-shadow:1px 1px 0 #fff;
+    font-size:14px;
+}
+
+.gamerringtext {
+    font-family:Times New Roman !important;
+}
+
+.r {
+    font-size:22px;
+    vertical-align:-4px;
+}
+
+.sub {
+    opacity:0.8;
+    text-shadow:1px 1px 0 #fff;
+    color:#000;
+}
+
+#gamer-ring .webring-links {
+    font-weight:100;
+    font-size:10px;
+}
+
+/*RIGHT SIDEBAR*/
+.sidecont2 {
+    display:flex;
+    flex-direction:column;
+    z-index:1;
+}
+
+.sideboxR {
+    width:150px;
+    border:3px lime;
+    border-style:outset;
+    background:black;
+}
+
+.gameracamborder {
+    max-width:140px;
+    margin:3px 0px -1px 3px;
+    padding:1px;
+    border:1px solid white;
+}
+
+#gameracam img {
+    z-index:1;
+}
+
+#gameracam li::before {
+    text-align:left;
+    padding:0;
+    margin:3px 0 0 0;
+    content:"★ ";
+    font-style:italic;
+    color:lime;
+}
+
+#findme {
+    margin-top:20px;
+}
+
+#findme li::before {
+    text-align:left;
+    padding:0;
+    margin:3px 0 0 0;
+    content:"❤ ";
+    font-style:italic;
+    font-size:15px;
+    color:lime;
+}
+
+hr.divider1 {
+    border:0;
+    margin:0 0 0 0;
+    clear:both;
+    display:block;
+    width:100%;
+    border-top:1px solid lime;
+}
+
+#contactlinks {
+    padding-top:3px;
+}
+
+#contactlinks li {
+    text-align:justify;
+    padding:0;
+    margin:0 0 0 12px;
+    font-style:italic;
+    color:lime;
+    font-size:17px;
+}
+
+#contactlinks li::before {
+    text-align:left;
+    padding:0;
+    margin:10px 0 0 0;
+    content:"⇁";
+    font-style:italic;
+    color:lime;
+    font-size:20px;
+}
+
+#contactlinks a {
+    
+    color:lime;
+}
+
+.sendemail {
+    font-family:decoder;
+    animation:blinker 1s linear infinite;
+    text-align:right;
+    margin:-5px 8px 3px 0;
+    line-height:0.7;
+    font-size:17px;
+    color:hotpink;
+}
+
+.sendemail a {
+    color:hotpink;
+}
+
+
+.sticker1 {
+    position:relative;
+    top:-35px;
+    left:-75px;
+    z-index:1;
+}
+
+.sticker2 {
+    position:relative;
+    top:-35px;
+    left:-95px;
+    -webkit-transform:scaleX(-1);
+    z-index:1;
+}
+
+.sticker1 img, .sticker2 img {
+    width:80%;
+}
+
+.sticker1 img:hover, .sticker2 img:hover {
+    -webkit-transform:scaleX(-1);
+}
+
+
+/*MAIN CONTENT*/
+.homecontainer {
+    display:flex;
+    width:650px;
+    margin:auto;
+    justify-content:space-around;
+}
+
+/*BUTTON ROW*/
+.buttonrow {
+    text-align:center;
+    margin:20px auto;
+}
+
+.buttonrow img {
+    margin:0 6px;
+}
+
+/*LEFTCONT*/
+
+.leftcont {
+    width:375px;
+    margin:0;
+}
+
+.featuredheader {
+    display:inline-flex;
+    width:100%;
+    flex-direction:row;
+    justify-content:space-between;
+    color:white;
+    user-select:none;
+}
+
+.gameinfocontainer {
+    width:374px;
+    display:flex;
+    position:relative;
+    flex-direction:row;
+    align-items:flex-end;
+    justify-content:space-between;
+    position:relative;
+    border-top:solid 1px white;
+    padding-top:5px;
+    height:160px;
+}
+
+
+
+
+
+footer {
+    color: white;
+    font-size:12px;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:5px;
+}
+
+
+
+
+
