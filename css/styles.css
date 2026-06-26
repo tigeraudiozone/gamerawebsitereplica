@@ -578,8 +578,10 @@ hr.divider1 {
     display:flex;
     flex-direction:row;
     justify-content:flex-end;
-    margin-top:-5px;
+    margin-top:-10px;
     margin-bottom:50px;
+    /*border:solid 1px white;*/
+    
 }
 
 .fleetingdiv a, .fleetingdiv a:visited {
@@ -590,10 +592,10 @@ hr.divider1 {
 }
 
 .fleetinglink {
-    text-align:right;
-    font-size:18pt;
-    vertical-align:sub;
-    border:solid 1px white;
+    display:flex;
+    align-items: center;
+    flex-direction:row;
+    font-size:18px;
 }
 
 .fleetinglink:hover {
@@ -603,8 +605,7 @@ hr.divider1 {
 .fleetinglink:hover::before {
     content:"fleeting thoughts...";
     font-size:15px;
-    
-
+}
 
 
 
