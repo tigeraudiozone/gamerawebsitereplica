@@ -573,6 +573,38 @@ hr.divider1 {
     color:hotpink;
 }
 
+.fleetingdiv {
+    float:right;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    margin-top:-5px;
+    margin-bottom:50px;
+}
+
+.fleetingdiv a, .fleetingdiv a:visited {
+    color:hotpink;
+    text-decoration:none;
+    font-family:decoder;
+    margin-right:0;
+}
+
+.fleetinglink {
+    text-align:right;
+    font-size:18pt;
+    vertical-align:sub;
+    border:solid 1px white;
+}
+
+.fleetinglink:hover {
+    color:white;
+}
+
+.fleetinglink:hover::before {
+    content:"fleeting thoughts...";
+    font-size:15px;
+    
+
 
 
 
